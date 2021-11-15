@@ -24,7 +24,10 @@ jobs:
     steps:
       - checkout
       - run:
-          command:  echo " SM text to output here" > output.txt
+          command:  
+            echo " SM text to output here" > output.txt
+            pwd
+          
     
   print_output_file:
     docker:
