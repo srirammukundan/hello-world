@@ -24,9 +24,12 @@ jobs:
     steps:
       - checkout
       - run:
-          command:  
+          command:
+            cd /home/curl_user/project;
             echo " SM text to output here" > output.txt;
-            pwd
+            pwd;
+            ls;
+
           
     
   print_output_file:
@@ -36,6 +39,7 @@ jobs:
       - checkout
       - run:
           command: 
+            cd /home/curl_user/project;
             pwd;
             ls;
             output.txt    
