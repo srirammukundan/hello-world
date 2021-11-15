@@ -40,7 +40,7 @@ jobs:
             cd /home/curl_user/project;
             pwd;
             ls;
-            cat /home/curl_user/project/output.txt    
+            cat README.md  
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
