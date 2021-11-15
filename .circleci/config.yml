@@ -27,11 +27,9 @@ jobs:
           command:
             cd /home/curl_user/project;
             echo " SM text to output here" > output.txt;
-            pwd;
-            ls;
+            echo "PWD-" pwd;
+            echo"ls- " ls -la;
 
-          
-    
   print_output_file:
     docker:
       - image: curlimages/curl
