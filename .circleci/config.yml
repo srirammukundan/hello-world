@@ -23,12 +23,11 @@ jobs:
       - image: curlimages/curl
     steps:
       - checkout
-      - run:
-          command:
-            cd /home/curl_user/project;
-            echo " SM text to output here" > output.txt;
-            pwd;
-            ls;
+      - run: echo " SM text to output here" > ~/output.txt
+      - persist_to_workspace:
+            root: ~/
+            paths:
+              - output.txt;
 
   print_output_file:
     docker:
@@ -40,7 +39,8 @@ jobs:
             cd /home/curl_user/project;
             pwd;
             ls;
-            cat README.md  
+            cat README.md
+
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
