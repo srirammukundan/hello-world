@@ -37,6 +37,7 @@ jobs:
       - run:
           command: 
             pwd;
+            ls;
             output.txt    
 
 # Invoke jobs via workflows
