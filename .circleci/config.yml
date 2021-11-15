@@ -27,7 +27,7 @@ jobs:
           command:
             cd /home/curl_user/project;
             echo " SM text to output here" > output.txt;
-            echo "PWD-" pwd;
+            pwd;
             ls;
 
   print_output_file:
