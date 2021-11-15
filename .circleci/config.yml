@@ -25,7 +25,7 @@ jobs:
       - checkout
       - run: echo " SM text to output here" > ~/output.txt
       - persist_to_workspace:
-            root: ~/
+            root: /home/curl_user/
             paths:
               - output.txt;
 
@@ -34,7 +34,7 @@ jobs:
       - image: curlimages/curl
     steps:
       - attach_workspace:
-          at: ~/
+          at: /home/curl_user/
       - run: cat ~/output.txt
 
 
