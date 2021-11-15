@@ -33,13 +33,9 @@ jobs:
     docker:
       - image: curlimages/curl
     steps:
-      - checkout
-      - run:
-          command: 
-            cd /home/curl_user/project;
-            pwd;
-            ls;
-            cat README.md
+      - attach_workspace:
+          at: ~/
+      - run: cat ~/output.txt
 
 
 # Invoke jobs via workflows
