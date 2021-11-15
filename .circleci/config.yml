@@ -36,8 +36,8 @@ jobs:
       - checkout
       - run:
           command: 
-            cd /home/curl_user/project/;
-            cat output.txt    
+            pwd;
+            output.txt    
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
