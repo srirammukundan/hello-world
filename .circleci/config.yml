@@ -25,7 +25,8 @@ jobs:
       - checkout
       - run: echo " SM text to output here" > ~/output.txt;
              pwd;
-             ls; 
+             ls;
+             root;
       - persist_to_workspace:
             root: /home/curl_user/
             paths:
