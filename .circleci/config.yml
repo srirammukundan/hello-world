@@ -25,7 +25,7 @@ jobs:
       - checkout
       - run:
           command:  
-            echo " SM text to output here" > output.txt
+            echo " SM text to output here" > output.txt;
             pwd
           
     
