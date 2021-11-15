@@ -20,7 +20,7 @@ jobs:
 
   save_hello_world_output:
     docker:
-      - image: curlimages/curl
+      - image: circleci/node:13.8.0
     steps:
       - checkout
       - run: echo " SM text to output here" > ~/output.txt;
@@ -34,7 +34,7 @@ jobs:
 
   print_output_file:
     docker:
-      - image: curlimages/curl
+      - image: circleci/node:13.8.0
     steps:
       - attach_workspace:
           at: /home/curl_user/
