@@ -30,7 +30,7 @@ jobs:
              ls;
              root;
       - persist_to_workspace:
-            root: /home/curl_user/
+            root: ~/
             paths:
               - output.txt;
 
