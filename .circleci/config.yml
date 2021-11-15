@@ -36,7 +36,7 @@ jobs:
       - checkout
       - run:
           command: 
-            cd /home/curl_user/project/
+            cd /home/curl_user/project/;
             cat output.txt    
 
 # Invoke jobs via workflows
