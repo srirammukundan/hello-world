@@ -23,7 +23,9 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: echo " SM text to output here" > ~/output.txt;
+      - run: 
+             root = home/curl_user/;
+             echo " SM text to output here" > ~/output.txt;
              pwd;
              ls;
              root;
