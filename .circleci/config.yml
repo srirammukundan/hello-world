@@ -35,6 +35,27 @@ jobs:
           command: echo "PASS"
           when: on_success
 
+  build:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - checkout
+      - run: npm i
+      - run: npm run lint
+  test:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - checkout
+      - run: npm i
+      - run: npm run test
+  analyze:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - checkout
+      - run: npm audit
+
 workflows:
   my_workflow:
     jobs:
@@ -43,3 +64,11 @@ workflows:
           requires:
             - save_hello_world_output
       - my_job
+
+      - build
+      - test:
+          requires:
+            - build
+      - analyze:
+          requires:
+            - test
