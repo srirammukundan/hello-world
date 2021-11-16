@@ -30,6 +30,10 @@ jobs:
           name: on error
           command: echo "Hello Error!"
           when: on_fail
+      - run:
+          name: on pass
+          command: echo "PASS"
+          when: on_success
 
 workflows:
   my_workflow:
