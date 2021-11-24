@@ -19,7 +19,7 @@ jobs:
     steps:
       - attach_workspace:
          at: ~/
-      - run: cat ~/output1.txt
+      - run: cat ~/output.txt
       
   my_job:
     docker:
