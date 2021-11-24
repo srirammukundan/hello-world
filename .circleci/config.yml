@@ -54,7 +54,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: npm audit
+#      - run: npm audit
 
 workflows:
   my_workflow:
